@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
       //メッセージを受信した時にconsole.logに出力する
     socket.on('chat message', (msg) => {
         console.log('message:'+ msg);
+        io.emit('chat message', msg);//参加者全員にメッセージを送る
     })
     console.log('a user connected');
     socket.on('disconnect', ()=>{
