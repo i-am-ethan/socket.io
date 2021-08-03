@@ -7,5 +7,11 @@ https://socket.io/get-started/chat
 Node.jsまたはsocket.ioの基本的な予備知識はほとんど必要がない。
 
 # 序章
-
 1.node.jsがインストールされていることを確認する
+2.package.jsonを追加
+3.expressのインストール
+
+```
+npm install express@4
+```
+
