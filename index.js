@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
 
   //接続確立後の処理
   io.on('connection', (socket) => {
+      //メッセージを受信した時にconsole.logに出力する
+    socket.on('chat message', (msg) => {
+        console.log('message:'+ msg);
+    })
     console.log('a user connected');
     socket.on('disconnect', ()=>{
         console.log('user disconnected')
