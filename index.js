@@ -13,6 +13,9 @@ app.get('/', (req, res) => {
   //接続確立後の処理
   io.on('connection', (socket) => {
     console.log('a user connected');
+    socket.on('disconnect', ()=>{
+        console.log('user disconnected')
+    })
   });
   
 
