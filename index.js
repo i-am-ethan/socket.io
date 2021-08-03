@@ -5,8 +5,8 @@ const server = http.createServer(app);
 
 //ルートディレクトリにアクセスした時に呼び出される
 app.get('/', (req, res) => {
-  res.send('<h1>Hello world</h1>');
-});
+    res.sendFile(__dirname + '/index.html');
+  });
 
 //3000portで呼び出す
 server.listen(3000, () => {
